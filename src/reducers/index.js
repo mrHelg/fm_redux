@@ -1,7 +1,8 @@
 import ACTION_TYPES from "../actions/actionTypes";
 const initialState = {
   count:0, 
-  step:1
+  step:1,
+  prop1:10,
 };
 function reducer(state=initialState, action){
   switch(action.type){
