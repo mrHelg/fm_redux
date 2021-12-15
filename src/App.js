@@ -1,4 +1,6 @@
 import Counter from "./components/Counter";
+import TaskForm from "./components/TaskForm";
+import TodoList from "./components/TodoList";
 
 
 function App(props) {
@@ -6,6 +8,9 @@ function App(props) {
     <div>
      <Counter />
      <hr/>
+     <TaskForm />
+     <hr/>
+     <TodoList />
     </div>
   );
 }

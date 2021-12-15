@@ -5,7 +5,7 @@ export const createTask = (values)=>({
   values,
 })
 
-export const updateTask = (id, values)=>({
+export const updateTask = ({id, values})=>({
   type: ACTION_TYPES.UPDATE_TASK,
   id,
   values,
