@@ -8,10 +8,10 @@ export function* createUserSaga(action) {
       data: {
         data: [user],
       },
-    } = yield API.createUser(action.payload);
-    yield put(UserActionCreators.createUserSuccess(user));
+    } = yield API.createUser(action.payload.values);
+    yield put(UserActionCreators.createUserSuccess({user}));
   } catch (error) {
-    yield put(UserActionCreators.createUserError(error));
+    yield put(UserActionCreators.createUserError({error}));
   }
 }
 

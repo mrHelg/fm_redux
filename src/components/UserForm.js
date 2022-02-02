@@ -6,7 +6,7 @@ import * as UserActionCreators from '../actions/userCreators';
 const UserForm = (props) => {
   const { createUserReqAction } = props;
   const onSubmit = (values, formikBag) => {
-    createUserReqAction(values);
+    createUserReqAction({values});
     formikBag.resetForm();
   };
   return (
@@ -35,8 +35,8 @@ const UserForm = (props) => {
 };
 
 const mapDispatchToProps = (dispatch) => ({
-  createUserReqAction: (values) =>
-    dispatch(UserActionCreators.createUserRequest(values)),
+  createUserReqAction: ({values}) =>
+    dispatch(UserActionCreators.createUserRequest({values})),
 });
 
 export default connect(undefined, mapDispatchToProps)(UserForm);
